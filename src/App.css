@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.pageTitle {
+  color: rgb(47, 142, 103);
+  margin-bottom:30px;
+}
+
+.companyTitleColour {
+    color:white;
+}
+
+.navbar {
+  background-color:#982e4a;
+  margin-bottom: 10px;;
+}

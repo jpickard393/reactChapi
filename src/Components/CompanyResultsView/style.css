@@ -1,0 +1,11 @@
+table {
+    color:darkslategrey;
+}
+td {
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.addressRow {
+    padding-left:10px;
+}
