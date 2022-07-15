@@ -27,6 +27,7 @@ const CompanyNumberSearchForm = () => {
     if(companyNumber) fetchData(companyNumber);
   }
     return (
+      <div>
       <div className="form-control form-container">
         <div className="row companyNumberSearch">
           <div className="col-md-3">
@@ -39,9 +40,10 @@ const CompanyNumberSearchForm = () => {
             <button className="btn btn-warning" onClick={clearInput}>Clear</button>
           </div>}
         </div>
+        
+        </div>
         {companyData && <CompanyResultsView companyData = {companyData}></CompanyResultsView>}
         </div>
-        
     )
 }
 export default CompanyNumberSearchForm;
