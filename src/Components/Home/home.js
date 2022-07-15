@@ -4,9 +4,10 @@ import SearchByCompanyId from "../CompanyNumberSearchForm";
 const Home = () => {
     return (
         <div className="container">
-        <div>Home
-            <SearchByCompanyId />
+        <div className='pageTitle'>
+            <h1>Search By Company ID</h1>
         </div>
+        <SearchByCompanyId />
         </div>
     )
 }
