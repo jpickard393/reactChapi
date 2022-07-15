@@ -7,4 +7,10 @@ const getCompanyByNumber = async (companyNumber) => {
     return await fetchData(url);
 }
 
-export default getCompanyByNumber;
+const getAdvancedSearch = async(searchParam) => {
+    const path= "advanced-search/companies/";
+    const url = `${baseUrl}${path}${searchParam}`; 
+    return await fetchData(url);
+}
+
+export { getCompanyByNumber, getAdvancedSearch};

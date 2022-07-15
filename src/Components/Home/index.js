@@ -5,9 +5,9 @@ const Home = () => {
     return (
         <div className="container">
         <div className='pageTitle'>
-            <h1>Search By Company ID</h1>
+            <h1>Companies House API Demo</h1>
         </div>
-        <SearchByCompanyId />
+       
         </div>
     )
 }

@@ -1,18 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 return (
     <div>
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand companyTitleColour" href="#">Companies Hous API</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<nav className="navbar navbar-expand-lg">
+  <div className="container-fluid">
+    <a className="navbar-brand companyTitleColour" href="#">Companies Hous API</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-light" aria-current="page" href="">Home</a>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <Link className="nav-link text-light" aria-current="page" to="/">Home</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link text-light" aria-current="page" to="/CompanyNumberSearchForm">Search</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link text-light" aria-current="page" to="/AdvancedSearchForm">Advanced Search</Link>
         </li>
        </ul>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import CompanyResultsView from "../CompanyResultsView";
-import getCompanyByNumber from '../../API/companyRequest';
+import { getCompanyByNumber } from '../../API/companyRequest';
 import './style.css';
 
 const CompanyNumberSearchForm = () => {
@@ -27,7 +27,8 @@ const CompanyNumberSearchForm = () => {
     if(companyNumber) fetchData(companyNumber);
   }
     return (
-      <div>
+      <div className="container">
+        <h1>Search By Company Number</h1>
       <div className="form-control form-container">
         <div className="row companyNumberSearch">
           <div className="col-md-3">
