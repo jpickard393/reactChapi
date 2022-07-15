@@ -1,23 +1,40 @@
-import React from "react";
-import CompanyResultsView from "../CompanyResultsView/CompanyResultsView";
+import React, { useState, useCallback } from "react";
+import CompanyResultsView from "../CompanyResultsView";
+import getCompanyByNumber from '../../API/companyRequest';
+import './style.css';
 
 const CompanyNumberSearchForm = () => {
+  const [companyData, setCompanyData] = useState();
+  const [companyNumber, setCompanyNumber] = useState();
+
+  const fetchData = useCallback(async (companyNumber) => {
+    if(companyNumber){
+      const company = await getCompanyByNumber(companyNumber);
+      setCompanyData(company);
+      console.log(companyData);
+    }
+  },[])
+
+  const handleInputChange = (e) => {
+    setCompanyNumber(e.target.value);
+  }
+
+  const fetchCompanyData = () => {
+    if(companyNumber) fetchData(companyNumber);
+  }
     return (
       <div>
-        <div class="row">
-          <div class="col-md-3">
-            <input type="text" class="form-control" placeholder="Company Number" aria-label="First name"></input>
+        <div className="row companyNumberSearch">
+          <div className="col-md-3">
+            <input type="text" className="form-control" placeholder="Company Number" aria-label="Company Number" onChange={handleInputChange}></input>
           </div>
-          <div class="col-md-1">
-            <button class="btn btn-primary">Search</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-10">
-            <CompanyResultsView></CompanyResultsView>
+          <div className="col-md-1">
+            <button className="btn btn-primary" onClick={fetchCompanyData}>Search</button>
           </div>
         </div>
+        {companyData && <CompanyResultsView companyData = {companyData}></CompanyResultsView>}
         </div>
+        
     )
 }
 export default CompanyNumberSearchForm;
