@@ -19,6 +19,10 @@ const CompanyResultsView = ({companyData}) => {
                     <td>Company Number</td>
                     <td>{companyData?.companyNumber}</td>
                 </tr>
+                <tr>
+                    <td>Has Been Liquidated</td>
+                    <td>{companyData?.hasBeenLiquidated?'Yes':'No'}</td>
+                </tr>
             </tbody>
         </table>
     )
