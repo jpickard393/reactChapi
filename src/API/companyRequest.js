@@ -1,5 +1,5 @@
 import { fetchData } from "./fetchData";
-import { baseUrl } from "../globalConstants";
+import { baseUrl, proxyUrl } from "../globalConstants";
 
 const getCompanyByNumber = async (companyNumber) => {
     const path = "company/";
@@ -9,7 +9,8 @@ const getCompanyByNumber = async (companyNumber) => {
 
 const getAdvancedSearch = async(searchParam) => {
     const path= "advanced-search/companies/";
-    const url = `${baseUrl}${path}${searchParam}`; 
+    const url = `${proxyUrl}${path}${searchParam}`; 
+    //const url = `${baseUrl}${path}${searchParam}`; 
     return await fetchData(url);
 }
 

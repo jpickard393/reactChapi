@@ -32,7 +32,7 @@ const AdvancedSearchForm = () => {
       <div className="form-control form-container">
         <div className="row companyNumberSearch">
           <div className="col-md-3">
-            <input type="text" className="form-control" placeholder="Company Number" aria-label="Company Number" onChange={handleInputChange} value={searchParam}></input>
+            <input type="text" className="form-control" placeholder="Search Parameters" aria-label="Search Parameters" onChange={handleInputChange} value={searchParam}></input>
           </div>
           <div className="col-sm-1">
             <button className="btn btn-primary" disabled={!searchParam} onClick={fetchCompanyData}>Search</button>

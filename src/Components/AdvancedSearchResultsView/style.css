@@ -9,3 +9,13 @@ td {
 .addressRow {
     padding-left:10px;
 }
+
+.boldCompanyName {
+    font-weight: 800;
+}
+
+.resultsHeader {
+    margin-top:10px;
+    font-size: larger;
+    color: darkgreen;
+}

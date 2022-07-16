@@ -2,6 +2,7 @@ import React from "react";
 import './style.css';
 
 const CompanyResultsView = ({companyData}) => {
+    console.log(companyData);
     return (
         <table className="table">
             <thead>
@@ -13,38 +14,46 @@ const CompanyResultsView = ({companyData}) => {
             <tbody>
                 <tr>
                     <td>Company Name</td>
-                    <td>{companyData?.companyName}</td>
+                    <td>{companyData?.company_name}</td>
                 </tr>
                 <tr>
                     <td>Company Number</td>
-                    <td>{companyData?.companyNumber}</td>
+                    <td>{companyData?.company_number}</td>
+                </tr>
+                <tr>
+                    <td>Company Type</td>
+                    <td>{companyData?.type}</td>
                 </tr>
                 <tr>
                     <td>Has Been Liquidated</td>
-                    <td>{companyData?.hasBeenLiquidated?'Yes':'No'}</td>
+                    <td>{companyData?.has_been_liquidated?'Yes':'No'}</td>
                 </tr>
                 <tr>
                     <td>Status</td>
-                    <td>{companyData?.companyStatus}</td>
+                    <td>{companyData?.company_status}</td>
                 </tr>
                 <tr>
                     <td>Registered Office Address</td>
                     <td>
-                        <div className='row addressRow'>{companyData?.registeredOfficeAddress.addressLine1}</div>
-                        <div className='row addressRow'>{companyData?.registeredOfficeAddress.addressLine2}</div>
-                        <div className='row addressRow'>{companyData?.registeredOfficeAddress.locality}</div>
-                        <div className='row addressRow'>{companyData?.registeredOfficeAddress.region}</div>
-                        <div className='row addressRow'>{companyData?.registeredOfficeAddress.postalCode}</div>
-                        <div className='row addressRow'>{companyData?.registeredOfficeAddress.country}</div>
+                        <div className='row addressRow'>{companyData?.registered_office_address?.address_line1}</div>
+                        <div className='row addressRow'>{companyData?.registered_office_address?.address_line2}</div>
+                        <div className='row addressRow'>{companyData?.registered_office_address?.locality}</div>
+                        <div className='row addressRow'>{companyData?.registered_office_address?.region}</div>
+                        <div className='row addressRow'>{companyData?.registered_office_address?.postalCode}</div>
+                        <div className='row addressRow'>{companyData?.registered_office_address?.country}</div>
                     </td>
                 </tr>
                 <tr>
                     <td>Date of Creation</td>
-                    <td>{companyData?.dateOfCreation}</td>
+                    <td>{companyData?.date_of_creation}</td>
+                </tr>
+                <tr>
+                    <td>Date of Cessation</td>
+                    <td>{companyData?.date_of_cessation}</td>
                 </tr>
                 <tr>
                     <td>History of Insolvancy</td>
-                    <td>{companyData?.hasInsolvencyHistory?'Yes':'No'}</td>
+                    <td>{companyData?.has_insolvency_history?'Yes':'No'}</td>
                 </tr>
                 <tr>
                     <td>ETAG</td>
