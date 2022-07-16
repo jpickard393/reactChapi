@@ -5,7 +5,7 @@ import './style.css';
 
 const CompanyNumberSearchForm = () => {
   const [companyData, setCompanyData] = useState();
-  const [companyNumber, setCompanyNumber] = useState('02312934');
+  const [companyNumber, setCompanyNumber] = useState('');
 
   const fetchData = useCallback(async (companyNumber) => {
     if(companyNumber){

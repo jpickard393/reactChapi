@@ -5,7 +5,7 @@ import './style.css';
 
 const AdvancedSearchForm = () => {
   const [companyData, setCompanyData] = useState();
-  const [searchParam, setSearchParam] = useState('location=leeds');
+  const [searchParam, setSearchParam] = useState('');
 
   const fetchData = useCallback(async (params) => {
     if(params){
